@@ -1,6 +1,6 @@
 "HairSalonApp"
  
- Live : 
+ Live : https://hair-salon-app-a40ea.web.app
  
 ==> This is an Hair Service Booking Website site. Here you can Book different Service of hair treatment.
 

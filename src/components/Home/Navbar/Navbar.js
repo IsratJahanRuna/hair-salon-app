@@ -25,42 +25,30 @@ const Navbar = () => {
             });
     }
     return (
-        <nav className="navbar navbar-expand-lg color">
+        <nav class="navbar navbar-expand-lg navbar-light background color">
+        <div class="container-fluid">
+        <Link  class="navbar-brand fw-bolder text-light " to="/home">Mremot</Link>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-        </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav ms-auto ">
+                    <li className="nav-item active">
+                        <Link className="nav-link ms-5 text-light" to="/home">Home </Link>
 
-        <div className="collapse navbar-collapse d-flex flex-row-reverse me-5" id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto">
-                <li className="nav-item active">
-                    <a className="nav-link mr-5 text-white me-2" href="/"><b>Home</b></a>
-                </li>
-                <li className="nav-item active">
-                    <a className="nav-link mr-5 text-white me-2" href="/dashboard"><b>Dashboard</b></a>
-                </li>
-                {/* <li className="nav-item">
-                    <a className="nav-link mr-5 text-white me-2" href="/home/about"><b>About</b></a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link mr-5 text-white me-2" href="/home/ourServices"><b>Our Services</b></a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link mr-5 text-white me-2" href="/home/reviews"><b>Reviews</b></a>
-                </li>
-            
-                <li className="nav-item">
-                    <a className="nav-link mr-5 text-white " href="/home/contactUs"><b>Contact Us</b></a>
-                </li> */}
-                  <li class="nav-item">
-                            <Link to="#" className="nav-link active text-dark  fw-bolder">{loggedInUser.name || loggedInUser.email}</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link to="/login" className="nav-link text-light border-gradient-red fw-bolder" onClick={handleSignOut}>{loggedInUser.email ? 'Logout' : 'Login'}</Link>
-                        </li>
-            </ul>
-        </div>
-    </nav>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link ms-5 text-light" to="/dashboard">Dashboard</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link ms-5 text-light " to="/login">Login</Link>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+        </nav>
     );
 };
 

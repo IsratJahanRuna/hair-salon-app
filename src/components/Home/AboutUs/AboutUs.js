@@ -7,11 +7,11 @@ import { faCut , faBrush } from '@fortawesome/free-solid-svg-icons';
 const AboutUs = () => {
     return (
         <div className="row mt-3 about-bg ">
-            <div className="col-md-3 about-head" style={{ marginLeft: "40px", marginTop: "60px",fontStyle: "oblique" }}>
+            <div className="col-md-3 about-head" style={{fontStyle: "oblique" }}>
                 <h1>THE RIGHT PLACE <br /> FOR YOUR HAIRS <br /> & BEARDS</h1>
             </div>
-            <div className="col-md-3 m-auto about-mid" >
-                <img src={hairCut} alt="" className="img-fluid" />
+            <div className="col-md-4 m-auto about-mid" >
+                <img src={hairCut} alt="" className="img-fluid w-100 h-100" />
 
                 <div className="d-flex  mt-4">
                     <div class="card hair-work" style={{marginRight:"30px"}}>
