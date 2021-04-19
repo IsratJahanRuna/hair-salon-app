@@ -41,9 +41,15 @@ const Navbar = () => {
                     <li className="nav-item">
                         <Link className="nav-link ms-5 text-light" to="/dashboard">Dashboard</Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link className="nav-link ms-5 text-light " to="/login">Login</Link>
-                    </li>
+                    </li> */}
+                    <li class="nav-item">
+                            <Link to="#" className="nav-link active text-dark  fw-bolder">{loggedInUser.name || loggedInUser.email}</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to="/login" className="nav-link text-light border-gradient-red fw-bolder" onClick={handleSignOut}>{loggedInUser.email ? 'Logout' : 'Login'}</Link>
+                        </li>
                 </ul>
             </div>
 
