@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import Sidebar from '../../Sidebar/Sidebar';
 import Navbar from '../../NavbarDashboard/NavbarDashboard';
+import { UserContext } from '../../../../App';
 
 const Reviews = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [info, setInfo] = useState({});
     
     const handleBlur = e => {
@@ -12,11 +14,10 @@ const Reviews = () => {
         setInfo(newInfo);
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         const formData = new FormData()
-        console.log(info);
-        
-        formData.append('name', info.name);
+        e.preventDefault();
+        formData.append('name', loggedInUser.name);
         formData.append('comments', info.comments);
 
         fetch('https://shrouded-bastion-35026.herokuapp.com/addReview', {
@@ -25,7 +26,9 @@ const Reviews = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+               if(data){
+                   alert('Review added Successfully');
+               }
             })
             .catch(error => {
                 console.error(error)
@@ -43,7 +46,7 @@ const Reviews = () => {
                     <form class="row g-3 bg-secondary shadow mt-5 p-5 rounded container shadow" onSubmit={handleSubmit}>
                         <div className="col-md-12">
                             <label class="form-label fw-bolder text-white">Name</label>
-                            <input type="text" name="name" onBlur={handleBlur} class="form-control" placeholder="Enter Name" />
+                            <input type="text" name="name" defaultValue={loggedInUser.name} onBlur={handleBlur} class="form-control" placeholder="Enter Name" />
                         </div>
                         
                         <div className="col-md-12">
