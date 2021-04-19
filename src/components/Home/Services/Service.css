@@ -1,0 +1,12 @@
+.service{
+    transition: 1s;
+}
+.service:hover{
+    transform: scale(1.04);
+}
+.service img{
+    transition: 1s;
+}
+.service img:hover{
+    transform: scaleY(1.02);
+}

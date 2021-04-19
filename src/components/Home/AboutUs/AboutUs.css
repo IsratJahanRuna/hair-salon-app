@@ -1,0 +1,39 @@
+.about-bg{
+  
+    height: 400px;
+    width:100%;
+    color:rgb(83, 10, 83);
+    margin-left:1px;
+    
+}
+.hair-work{
+    width:400px;
+    text-align: center;
+    background-color: #5a0c5a;
+    box-shadow: 3px 3px 6px 6px lightpink;
+    color:white;
+    transition: 1s;
+}
+.hair-work:hover{
+    transform: scale(1.1);
+}
+
+.about-head h1{
+    transition:font-size;
+    transition-duration: .5s;
+}
+.about-head h1:hover{
+font-size:3rem;
+}
+.about-mid img{
+    transition: 1s;
+}
+.about-mid img:hover{
+    transform: scaleY(1.1);
+}
+.about-para h4{
+    transition: 1s;
+}
+.about-para h4:hover{
+    transform: scale(1.1);
+}

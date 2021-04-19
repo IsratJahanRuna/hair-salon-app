@@ -1,0 +1,7 @@
+.review{
+    transition:font-size;
+    transition-duration: .5s;
+}
+.review:hover{
+    font-size:3rem;
+}

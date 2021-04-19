@@ -1,0 +1,24 @@
+.contact{
+    background-image: url(../../../images/footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.contact::before{
+    position: absolute;
+    content: "";
+    top:0;
+    width: 100%;
+    height: 100%;
+    background:#5a0c5a;
+    opacity: .7;
+    z-index: -1;
+}
+.contact-title{
+    transition:font-size;
+    transition-duration: .5s;
+}
+.contact-title:hover{
+    font-size:2rem;
+}

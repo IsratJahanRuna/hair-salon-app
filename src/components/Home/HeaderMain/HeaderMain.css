@@ -1,0 +1,31 @@
+.header-btn{
+    background-color:#721946 ;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    margin-left: 63px;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px 6px #C94185;
+}
+.title h1{
+    transition:font-size;
+    transition-duration: 1s;
+}
+.title h1:hover{
+    font-size:4rem;
+}
+.header-img{
+    transition: transform 1s;
+    transform-origin: right bottom;
+}
+.header-img:hover{
+    transform:translate(40px, 10px);
+}
+.title button{
+    transition: transform 1s;
+    transform-origin: right bottom;
+}
+.title button:hover{
+    transform: translate(13px, 30px);
+}

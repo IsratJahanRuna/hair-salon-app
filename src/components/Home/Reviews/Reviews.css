@@ -1,0 +1,18 @@
+
+.reviews .card{
+    border-color: transparent;
+}
+
+.reviews .card .card-footer{
+    background: transparent;
+    border: 0;
+}
+.review-container{
+    height:450px;
+    background-image: url('../../../images/review.jpg');
+    background-size: cover;
+    opacity: 1
+    }
+.text{
+    color: rgb(241, 134, 150);
+    }
